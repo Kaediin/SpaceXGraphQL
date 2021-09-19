@@ -42,7 +42,7 @@ struct Launch: Codable, Hashable {
     var launchpad: String?
     var flightNumber: Int?
     var name, dateUTC: String?
-    var dateUnix: Int?
+    var dateUnix: Int64?
     var dateLocal: String?
     var datePrecision: String?
     var upcoming: Bool?

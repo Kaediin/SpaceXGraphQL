@@ -9,7 +9,7 @@ import Foundation
 class NetworkController{
     
     func getLaunches(completion: @escaping (Result<[Launch], Error>) -> Void) {
-        guard let url = URL(string: "https://api.spacexdata.com/v4/launches") else {
+        guard let url = URL(string: "https://api.spacexdata.com/v4/launches/past") else {
             print("Invalid URL!"); return
         }
         

@@ -13,6 +13,8 @@
 		0155035D26F4EB3500CC30E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0155035C26F4EB3500CC30E8 /* Preview Assets.xcassets */; };
 		01C3C7B226F62CC30050A9B2 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C3C7B126F62CC30050A9B2 /* Launch.swift */; };
 		01C3C7B526F62D0F0050A9B2 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C3C7B426F62D0F0050A9B2 /* NetworkController.swift */; };
+		01C3C7BA26F741560050A9B2 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C3C7B926F741560050A9B2 /* ImageLoader.swift */; };
+		01C3C7BC26F7470D0050A9B2 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C3C7BB26F7470D0050A9B2 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		0155035C26F4EB3500CC30E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		01C3C7B126F62CC30050A9B2 /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 		01C3C7B426F62D0F0050A9B2 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		01C3C7B926F741560050A9B2 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		01C3C7BB26F7470D0050A9B2 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 			children = (
 				0155035726F4EB3400CC30E8 /* ContentView.swift */,
 				01C3C7B126F62CC30050A9B2 /* Launch.swift */,
+				01C3C7BB26F7470D0050A9B2 /* CardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -85,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				01C3C7B426F62D0F0050A9B2 /* NetworkController.swift */,
+				01C3C7B926F741560050A9B2 /* ImageLoader.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -165,7 +171,9 @@
 			files = (
 				0155035826F4EB3400CC30E8 /* ContentView.swift in Sources */,
 				01C3C7B526F62D0F0050A9B2 /* NetworkController.swift in Sources */,
+				01C3C7BA26F741560050A9B2 /* ImageLoader.swift in Sources */,
 				01C3C7B226F62CC30050A9B2 /* Launch.swift in Sources */,
+				01C3C7BC26F7470D0050A9B2 /* CardView.swift in Sources */,
 				0155035626F4EB3400CC30E8 /* SpaceXApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,7 +318,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.daiken.SpaceX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -340,7 +348,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.daiken.SpaceX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

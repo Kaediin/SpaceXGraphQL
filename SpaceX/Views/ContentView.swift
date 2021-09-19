@@ -12,13 +12,17 @@ struct ContentView: View {
     @State var launches = [Launch]()
     
     var body: some View {
-        List(launches, id: \.self.id){launch in
-            VStack(spacing: 10){
-                Text(launch.name ?? "").bold()
-                Text(launch.dateUTC ?? "")
-                Text(launch.id).foregroundColor(.gray)
-            }.cornerRadius(10)
-                .padding(20)
+        ScrollView{
+            LazyVStack{
+                ForEach(launches, id: \.self.id){ launch in
+                    CardView(
+                        imageUrl: launch.links?.patch?.small ?? "",
+                        name: launch.name ?? "",
+                        id: launch.id,
+                        date: launch.dateLocal ?? ""
+                    ).padding(.vertical, 10)
+                }
+            }.padding(20)
         }.onAppear(){
             getLaunchesData()
         }
@@ -39,9 +43,6 @@ extension ContentView{
             case.success(let launches):
                 DispatchQueue.main.async {
                     self.launches = launches.reversed()
-                    //                    for launch in launches{
-                    //                        print(launch.flightNumber ?? "")
-                    //                    }
                 }
             case.failure(let error):
                 print(error.localizedDescription)
