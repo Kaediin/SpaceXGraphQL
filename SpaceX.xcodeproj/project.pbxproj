@@ -11,6 +11,8 @@
 		0155035826F4EB3400CC30E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0155035726F4EB3400CC30E8 /* ContentView.swift */; };
 		0155035A26F4EB3500CC30E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0155035926F4EB3500CC30E8 /* Assets.xcassets */; };
 		0155035D26F4EB3500CC30E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0155035C26F4EB3500CC30E8 /* Preview Assets.xcassets */; };
+		01C3C7B226F62CC30050A9B2 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C3C7B126F62CC30050A9B2 /* Launch.swift */; };
+		01C3C7B526F62D0F0050A9B2 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C3C7B426F62D0F0050A9B2 /* NetworkController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		0155035726F4EB3400CC30E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0155035926F4EB3500CC30E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0155035C26F4EB3500CC30E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		01C3C7B126F62CC30050A9B2 /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
+		01C3C7B426F62D0F0050A9B2 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,9 @@
 		0155035426F4EB3400CC30E8 /* SpaceX */ = {
 			isa = PBXGroup;
 			children = (
+				01C3C7B326F62D060050A9B2 /* Controller */,
+				01C3C7AE26F62C7E0050A9B2 /* Views */,
 				0155035526F4EB3400CC30E8 /* SpaceXApp.swift */,
-				0155035726F4EB3400CC30E8 /* ContentView.swift */,
 				0155035926F4EB3500CC30E8 /* Assets.xcassets */,
 				0155035B26F4EB3500CC30E8 /* Preview Content */,
 			);
@@ -65,6 +70,23 @@
 				0155035C26F4EB3500CC30E8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		01C3C7AE26F62C7E0050A9B2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0155035726F4EB3400CC30E8 /* ContentView.swift */,
+				01C3C7B126F62CC30050A9B2 /* Launch.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		01C3C7B326F62D060050A9B2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				01C3C7B426F62D0F0050A9B2 /* NetworkController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +105,8 @@
 			dependencies = (
 			);
 			name = SpaceX;
+			packageProductDependencies = (
+			);
 			productName = SpaceX;
 			productReference = 0155035226F4EB3400CC30E8 /* SpaceX.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +135,8 @@
 				Base,
 			);
 			mainGroup = 0155034926F4EB3400CC30E8;
+			packageReferences = (
+			);
 			productRefGroup = 0155035326F4EB3400CC30E8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +164,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0155035826F4EB3400CC30E8 /* ContentView.swift in Sources */,
+				01C3C7B526F62D0F0050A9B2 /* NetworkController.swift in Sources */,
+				01C3C7B226F62CC30050A9B2 /* Launch.swift in Sources */,
 				0155035626F4EB3400CC30E8 /* SpaceXApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
