@@ -40,7 +40,7 @@ struct Launch: Codable, Hashable {
     var capsules: [JSONAny]?
     var payloads: [String]?
     var launchpad: String?
-    var flightNumber: Int?
+    var flightNumber: Int
     var name, dateUTC: String?
     var dateUnix: Int64?
     var dateLocal: String?
