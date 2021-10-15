@@ -11,6 +11,10 @@
 		0155035826F4EB3400CC30E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0155035726F4EB3400CC30E8 /* ContentView.swift */; };
 		0155035A26F4EB3500CC30E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0155035926F4EB3500CC30E8 /* Assets.xcassets */; };
 		0155035D26F4EB3500CC30E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0155035C26F4EB3500CC30E8 /* Preview Assets.xcassets */; };
+		017AFD2F2719B8400094827D /* LaunchSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017AFD2E2719B8400094827D /* LaunchSuccessView.swift */; };
+		017AFD312719BE9E0094827D /* DetailHeadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017AFD302719BE9E0094827D /* DetailHeadingView.swift */; };
+		019C09AE26F9FFAD00F7FF80 /* DetailViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019C09AD26F9FFAD00F7FF80 /* DetailViews.swift */; };
+		019C09B026FA01A300F7FF80 /* MainViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019C09AF26FA01A200F7FF80 /* MainViews.swift */; };
 		01C3C7B226F62CC30050A9B2 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C3C7B126F62CC30050A9B2 /* Launch.swift */; };
 		01C3C7B526F62D0F0050A9B2 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C3C7B426F62D0F0050A9B2 /* NetworkController.swift */; };
 		01C3C7BA26F741560050A9B2 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C3C7B926F741560050A9B2 /* ImageLoader.swift */; };
@@ -23,6 +27,10 @@
 		0155035726F4EB3400CC30E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0155035926F4EB3500CC30E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0155035C26F4EB3500CC30E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		017AFD2E2719B8400094827D /* LaunchSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchSuccessView.swift; sourceTree = "<group>"; };
+		017AFD302719BE9E0094827D /* DetailHeadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeadingView.swift; sourceTree = "<group>"; };
+		019C09AD26F9FFAD00F7FF80 /* DetailViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViews.swift; sourceTree = "<group>"; };
+		019C09AF26FA01A200F7FF80 /* MainViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViews.swift; sourceTree = "<group>"; };
 		01C3C7B126F62CC30050A9B2 /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 		01C3C7B426F62D0F0050A9B2 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		01C3C7B926F741560050A9B2 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
@@ -76,12 +84,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		017AFD2D2719B8280094827D /* components */ = {
+			isa = PBXGroup;
+			children = (
+				01C3C7BB26F7470D0050A9B2 /* CardView.swift */,
+				017AFD2E2719B8400094827D /* LaunchSuccessView.swift */,
+				017AFD302719BE9E0094827D /* DetailHeadingView.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		01C3C7AE26F62C7E0050A9B2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				017AFD2D2719B8280094827D /* components */,
 				0155035726F4EB3400CC30E8 /* ContentView.swift */,
-				01C3C7B126F62CC30050A9B2 /* Launch.swift */,
-				01C3C7BB26F7470D0050A9B2 /* CardView.swift */,
+				019C09AD26F9FFAD00F7FF80 /* DetailViews.swift */,
+				019C09AF26FA01A200F7FF80 /* MainViews.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -89,6 +108,7 @@
 		01C3C7B326F62D060050A9B2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				01C3C7B126F62CC30050A9B2 /* Launch.swift */,
 				01C3C7B426F62D0F0050A9B2 /* NetworkController.swift */,
 				01C3C7B926F741560050A9B2 /* ImageLoader.swift */,
 			);
@@ -142,6 +162,7 @@
 			);
 			mainGroup = 0155034926F4EB3400CC30E8;
 			packageReferences = (
+				017AFD282719AEAA0094827D /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 0155035326F4EB3400CC30E8 /* Products */;
 			projectDirPath = "";
@@ -171,10 +192,14 @@
 			files = (
 				0155035826F4EB3400CC30E8 /* ContentView.swift in Sources */,
 				01C3C7B526F62D0F0050A9B2 /* NetworkController.swift in Sources */,
+				017AFD312719BE9E0094827D /* DetailHeadingView.swift in Sources */,
 				01C3C7BA26F741560050A9B2 /* ImageLoader.swift in Sources */,
 				01C3C7B226F62CC30050A9B2 /* Launch.swift in Sources */,
 				01C3C7BC26F7470D0050A9B2 /* CardView.swift in Sources */,
+				017AFD2F2719B8400094827D /* LaunchSuccessView.swift in Sources */,
+				019C09B026FA01A300F7FF80 /* MainViews.swift in Sources */,
 				0155035626F4EB3400CC30E8 /* SpaceXApp.swift in Sources */,
+				019C09AE26F9FFAD00F7FF80 /* DetailViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +328,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.1.2;
 				DEVELOPMENT_ASSET_PATHS = "\"SpaceX/Preview Content\"";
 				DEVELOPMENT_TEAM = 9NP5RW49Q5;
 				ENABLE_PREVIEWS = YES;
@@ -318,7 +343,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.daiken.SpaceX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -333,7 +358,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.1.2;
 				DEVELOPMENT_ASSET_PATHS = "\"SpaceX/Preview Content\"";
 				DEVELOPMENT_TEAM = 9NP5RW49Q5;
 				ENABLE_PREVIEWS = YES;
@@ -348,7 +373,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.daiken.SpaceX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -379,6 +404,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		017AFD282719AEAA0094827D /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 0155034A26F4EB3400CC30E8 /* Project object */;
 }

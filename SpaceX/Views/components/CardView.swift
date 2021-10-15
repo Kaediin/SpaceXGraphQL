@@ -18,7 +18,7 @@ struct CardView: View {
     
     var body: some View{
         VStack{
-            ZStack{
+            HStack{
                 Image(uiImage: image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -31,16 +31,17 @@ struct CardView: View {
                         guard let data = data else { return }
                         self.image = UIImage(data: data) ?? UIImage()
                     }
+                VStack(alignment: .center){
+                    Text(name).bold().font(.title2)
+                    Text(date).font(.footnote)
+                    Text("Flight number: \(String(flightNumber))").font(.system(size: 12))
+                }
             }.frame(
                 minWidth: 0,
                 maxWidth: .infinity,
                 alignment: .center
             )
-            VStack(alignment: .center){
-                Text(name).bold()
-                Text(date).font(.system(size: 12))
-                Text("Flight number: \(String(flightNumber))").font(.system(size: 9))
-            }
+            
         }
         .frame(
             minWidth: 0,

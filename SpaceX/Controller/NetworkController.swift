@@ -22,7 +22,6 @@ class NetworkController{
             do{
                 let launches = try! JSONDecoder().decode([Launch].self, from: data!)
                 completion(.success(launches))
-                print("Succes!")
             } catch let jsonErrror{
                 completion(.failure(jsonErrror.localizedDescription as! Error))
             }
