@@ -27,4 +27,44 @@ class NetworkController{
             }
         }.resume()
     }
+    
+    func getRockets(completion: @escaping (Result<[Rocket], Error>) -> Void) {
+        guard let url = URL(string: "https://api.spacexdata.com/v4/rockets") else {
+            print("Invalid URL!"); return
+        }
+        
+        URLSession.shared.dataTask(with: url){ (data, response, error) in
+            if let error = error {
+                completion(.failure(error.localizedDescription as! Error))
+                return
+            }
+            
+            do{
+                let rockets = try! JSONDecoder().decode([Rocket].self, from: data!)
+                completion(.success(rockets))
+            } catch let jsonErrror{
+                completion(.failure(jsonErrror.localizedDescription as! Error))
+            }
+        }.resume()
+    }
+    func getRocketById(rocketId: String, completion: @escaping (Result<Rocket, Error>) -> Void) {
+        guard let url = URL(string: "https://api.spacexdata.com/v4/rockets/\(rocketId)") else {
+            print("Invalid URL!"); return
+        }
+        print(url)
+        
+        URLSession.shared.dataTask(with: url){ (data, response, error) in
+            if let error = error {
+                completion(.failure(error.localizedDescription as! Error))
+                return
+            }
+            
+            do{
+                let rocket = try! JSONDecoder().decode(Rocket.self, from: data!)
+                completion(.success(rocket))
+            } catch let jsonErrror{
+                completion(.failure(jsonErrror.localizedDescription as! Error))
+            }
+        }.resume()
+    }
 }

@@ -15,7 +15,7 @@ struct LaunchesView: View{
             LazyVStack{
                 ForEach(launches, id: \.self.id){ launch in
                     NavigationLink(destination: LauchDetails(launch: launch)){
-                        CardView(
+                        LaunchTileView(
                             id: launch.id,
                             name: launch.name,
                             date: getDateString(dateString: launch.dateUTC),

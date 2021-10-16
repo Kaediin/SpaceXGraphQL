@@ -31,7 +31,7 @@ struct Launch: Codable, Hashable {
     var staticFireDateUnix: Int?
     var net: Bool?
     var window: Int?
-    var rocket: String?
+    var rocketId: String
     var success: Bool?
     var failures: [JSONAny]?
     var details: String?
@@ -55,9 +55,10 @@ struct Launch: Codable, Hashable {
         case fairings, links
         case staticFireDateUTC = "static_fire_date_utc"
         case staticFireDateUnix = "static_fire_date_unix"
-        case net, window, rocket, success, failures, details, crew, ships, capsules, payloads, launchpad
+        case net, window, success, failures, details, crew, ships, capsules, payloads, launchpad
         case flightNumber = "flight_number"
         case name
+        case rocketId = "rocket"
         case dateUTC = "date_utc"
         case dateUnix = "date_unix"
         case dateLocal = "date_local"

@@ -12,14 +12,14 @@ import MapKit
 struct LauchDetails: View {
     
     let launch: Launch
+    @State private var showingDetailsSheet = false
     
     var body: some View{
         ScrollView(.vertical){
-            DetailHeadingView(
-                launch: launch,
-                showingImage: launch.links?.patch?.small != nil
-            )
+            DetailHeadingView(launch: launch)
+            LaunchMissionDetailsView(details: launch.details)
+            LaunchRocketView(rocketId: launch.rocketId)
         }.padding()
-            
+        
     }
 }
